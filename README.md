@@ -1,13 +1,13 @@
 # My-DRL-Project-3-Collaboration-and-Competition
 [//]: # (Image References)
 
-![trained](trained.gif)
+
 
 ### Introduction
 
 For this project, I will train a double jointed robotic arm to follow a target location.   
 
-![Trained Agent][image1]
+![trained](trained.gif)
 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of my agent is to maintain its position at the target location for as many time steps as possible.
 
