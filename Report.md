@@ -4,7 +4,6 @@
 ### Learning Algorithm
 
 In this project I again used the Deep Deterministic Policy Gradients algorithym from the previous project and extended it to train multiple agents from the same learning experience (MADDPG). Deep Deterministic Policy Gradients Method is classified as an actor-critic method 
-
 In solving this environment, I started with the code implementation example in the course lab and modified them to solve the tennis environment.  
 MADDPG trains actors and critics using all agents information (actions and states). However, the trained agent model (actor) can make an inference independentaly using its own state.
 Noise based on an Ornstein-Uhlenbeck process is added to the predicted actions to encourage exploration.
@@ -28,13 +27,15 @@ The critic network has also 3 fully connected hidden layers with 256 units in th
 
 #### Results
 
-The environment is solved by reaching +30 average scores over 100 episodes after less than 300 episodes. The accumulation of rewards are given in the figure below:
+The environment is solved by reaching +0.516 average scores over 100 episodes (taking the maximum of two agents) after 1178 episodes. The accumulation of rewards are given in the figure below:
 
-<img width="637" alt="image" src="https://user-images.githubusercontent.com/66205537/166912377-7a2f4e4a-aae3-466d-a585-06a3a01fe7ef.png">
+![results](https://user-images.githubusercontent.com/66205537/174100186-64a2e883-cc0e-43b3-a5c2-431537a0fe75.png)
+
+From the figure, it is seen that the learning of the agent continuously improves. I interrupted the training as the episodes take very long time since the agents play well and keep the ball in the game. 
 
 #### Future Improvements
 
 Although the results are quite satisfactory they can still be improved :
-1. Faster convergence and higher accuracy can be obtained using multiple agents instead of a single agent. This iwll be my further work after submission of the project. 
-2. Alternative learning algorithyms like TRPO or D4PG can also be tried to see if they end up with better results. 
-3. A prioriterized experience replay can be used instead of regular replay which may provide more learning from experience tuples which has TD error close to zero. 
+1. I observed that the training performance of the agents were highly sensitive, i.e. when I run the code several times with the same hyperparameters I got different results. For some cases the agents could not get a score higher than 0.1 while in some cases they managed to get 0.5. This is one target for myself to improve my code to get more consistent results among multiple runs.
+2. I also observed the performance of the agent suddenly drops after a certain peak, wihch may be termed as instability. Further variation of hyperparamters can be tried to eliminate this affect. 
+3. Alternative learning algorithyms like DDPG with centralized training and decentralized execution can also be tried.  
