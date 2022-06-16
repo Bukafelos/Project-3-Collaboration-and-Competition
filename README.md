@@ -43,8 +43,12 @@ Follow the instructions in `Continuous_Control.ipynb` to get started using my co
  
 ### File Descriptions
 
-- model.py defines the DDPG model architecture
-- ddpg_agent.py defines how the agent takes actions based on the policy and learns based on feedback from the environment
-- Continuous_Control.ipynb runs the environemt and trains the agent. This is the main code to solve the environment
-- checkpoint_actor.pth contains the weights for the actor network. 
+- model.py defines the DDPG model architecture with actor and critic networks.
+- ddpg_agent.py defines how the agent takes actions based on the policy and learns based on feedback from the environment.
+- maddpg.py defines how multi agentstake actions and learn based feedbacl accumulated in the common replay buffer.
+- Tennis.ipynb runs the environemt and trains the agents. This is the main code to solve the environment
+- checkpoint_agent0_actor.pth contains the weights for the actor network of agent 0. 
+- checkpoint_agent1_actor.pth contains the weights for the actor network of agent 1. 
+- checkpoint_critic0_critic.pth contains the weights for the critic network of agent 0.
+- checkpoint_critic1_critic.pth contains the weights for the critic network of agent 1.
 - checkpoint_critic.pth contains the weights for the critic network. 
