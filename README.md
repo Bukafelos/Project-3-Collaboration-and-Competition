@@ -5,7 +5,7 @@
 
 ### Introduction
 
-For this project, I will train a two rackets to play tennis!  
+For this project, I will train two rackets to play tennis!  
 
 ![trained](trained.gif)
 
